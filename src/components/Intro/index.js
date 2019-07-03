@@ -24,13 +24,17 @@ const Intro = () => {
   useEffect(() => {
     codeLinesRef.forEach((ref, index) => {
       setTimeout(() => {
-        ref.current.classList.add('Intro-codeLine--entered');
+        if (ref.current) {
+          ref.current.classList.add('Intro-codeLine--entered');
+        }
       }, 500 * index);
     });
 
     elementsRef.forEach((ref, index) => {
       setTimeout(() => {
-        ref.current.classList.add(`${ref.current.classList[0]}--entered`);
+        if (ref.current) {
+          ref.current.classList.add(`${ref.current.classList[0]}--entered`);
+        }
       }, 200 * index);
     });
   }, []);
@@ -38,12 +42,14 @@ const Intro = () => {
   function openMobileMenu() {
     setIsMenuOpen(true);
     document.addEventListener('click', closeMobileMenu);
+    document.addEventListener('touchstart', closeMobileMenu);
   }
 
   function closeMobileMenu(e) {
     if (e.target.classList[0] === 'Intro-mobileMenu') return;
     setIsMenuOpen(false);
     document.removeEventListener('click', closeMobileMenu);
+    document.removeEventListener('touchstart', closeMobileMenu);
   }
 
   for (let i = 0; i < codeLinesCount; i++) {
