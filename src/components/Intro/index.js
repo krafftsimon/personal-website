@@ -100,7 +100,7 @@ const Intro = () => {
           <a
             className="Intro-mobileMenuBtn"
             target="_blank"
-            href="../assets/RESUME.pdf">
+            href="assets/resume.pdf">
             <img
               className="Intro-mobileMenuIcon"
               src={resumeIcon}
@@ -116,7 +116,7 @@ const Intro = () => {
             <a
               className="Header-navBtn"
               target="_blank"
-              href="../assets/RESUME.pdf">
+              href="assets/resume.pdf">
               Resume
             </a>
             <a
@@ -140,20 +140,14 @@ const Intro = () => {
           <h3 className="Intro-profileTitle" ref={elementsRef[1]}>
             Web-Developer / Software Engineer
           </h3>
-          <button
-            className="Intro-profileBtn"
-            onClick={() => TweenLite.to(window, 1, { scrollTo: '#projects' })}
-            ref={elementsRef[2]}>
+          <a className="Intro-profileBtn" href="#projects" ref={elementsRef[2]}>
             Experience
             <img className="Intro-chevronRight" src={chevronRight} />
-          </button>
-          <button
-            className="Intro-profileBtn"
-            onClick={() => TweenLite.to(window, 1, { scrollTo: '#contact' })}
-            ref={elementsRef[3]}>
+          </a>
+          <a className="Intro-profileBtn" href="#contact" ref={elementsRef[3]}>
             Contact
             <img className="Intro-chevronRight" src={chevronRight} />
-          </button>
+          </a>
         </div>
       </div>
     </section>

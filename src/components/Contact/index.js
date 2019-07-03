@@ -5,7 +5,7 @@ import './index.scss';
 
 const Contact = () => {
   return (
-    <section className="Contact">
+    <section className="Contact" id="contact">
       <div className="Contact-background">
         <div className="Contact-stripe1" />
         <div className="Contact-stripe2" />
