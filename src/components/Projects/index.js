@@ -4,7 +4,7 @@ import './index.scss';
 
 const Projects = () => {
   return (
-    <section className="Projects">
+    <section className="Projects" id="projects">
       <div className="Projects-container">
         <h1 className="Projects-title"> Experience / Projects </h1>
         <div className="Projects-list">
@@ -42,7 +42,7 @@ const Projects = () => {
           <Card
             title="Humidity Sensing RFID"
             description="Practical Radio-Frequency Identification Device (RFID), capable of detecting changes in humidity."
-            liveUrl="../assets/RFID_Poster_Presentation.pdf"
+            liveUrl="assets/rfid.pdf"
             img="assets/rfid.jpg"
           />
         </div>

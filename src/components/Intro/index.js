@@ -24,13 +24,17 @@ const Intro = () => {
   useEffect(() => {
     codeLinesRef.forEach((ref, index) => {
       setTimeout(() => {
-        ref.current.classList.add('Intro-codeLine--entered');
+        if (ref.current) {
+          ref.current.classList.add('Intro-codeLine--entered');
+        }
       }, 500 * index);
     });
 
     elementsRef.forEach((ref, index) => {
       setTimeout(() => {
-        ref.current.classList.add(`${ref.current.classList[0]}--entered`);
+        if (ref.current) {
+          ref.current.classList.add(`${ref.current.classList[0]}--entered`);
+        }
       }, 200 * index);
     });
   }, []);
@@ -38,12 +42,14 @@ const Intro = () => {
   function openMobileMenu() {
     setIsMenuOpen(true);
     document.addEventListener('click', closeMobileMenu);
+    document.addEventListener('touchstart', closeMobileMenu);
   }
 
   function closeMobileMenu(e) {
     if (e.target.classList[0] === 'Intro-mobileMenu') return;
     setIsMenuOpen(false);
     document.removeEventListener('click', closeMobileMenu);
+    document.removeEventListener('touchstart', closeMobileMenu);
   }
 
   for (let i = 0; i < codeLinesCount; i++) {
@@ -100,7 +106,7 @@ const Intro = () => {
           <a
             className="Intro-mobileMenuBtn"
             target="_blank"
-            href="../assets/RESUME.pdf">
+            href="assets/resume.pdf">
             <img
               className="Intro-mobileMenuIcon"
               src={resumeIcon}
@@ -116,7 +122,7 @@ const Intro = () => {
             <a
               className="Header-navBtn"
               target="_blank"
-              href="../assets/RESUME.pdf">
+              href="assets/resume.pdf">
               Resume
             </a>
             <a
@@ -140,20 +146,14 @@ const Intro = () => {
           <h3 className="Intro-profileTitle" ref={elementsRef[1]}>
             Web-Developer / Software Engineer
           </h3>
-          <button
-            className="Intro-profileBtn"
-            onClick={() => TweenLite.to(window, 1, { scrollTo: '#projects' })}
-            ref={elementsRef[2]}>
+          <a className="Intro-profileBtn" href="#projects" ref={elementsRef[2]}>
             Experience
             <img className="Intro-chevronRight" src={chevronRight} />
-          </button>
-          <button
-            className="Intro-profileBtn"
-            onClick={() => TweenLite.to(window, 1, { scrollTo: '#contact' })}
-            ref={elementsRef[3]}>
+          </a>
+          <a className="Intro-profileBtn" href="#contact" ref={elementsRef[3]}>
             Contact
             <img className="Intro-chevronRight" src={chevronRight} />
-          </button>
+          </a>
         </div>
       </div>
     </section>

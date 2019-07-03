@@ -1,5 +1,4 @@
 import React, { forwardRef } from 'react';
-
 import './index.scss';
 
 const Card = forwardRef(({ title, text, img }, ref) => {

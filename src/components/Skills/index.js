@@ -1,5 +1,4 @@
 import React, { createRef, useEffect } from 'react';
-
 import './index.scss';
 
 const Skills = () => {
