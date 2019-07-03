@@ -1,5 +1,4 @@
 import React from 'react';
-
 import icon4 from 'assets/icon4.png';
 import icon5 from 'assets/icon5.png';
 import './index.scss';
