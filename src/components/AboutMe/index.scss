@@ -1,0 +1,25 @@
+.AboutMe {
+  padding: 90px 15px 200px;
+  position: relative;
+}
+
+.AboutMe-title {
+  text-align: center;
+  font-weight: 400;
+  font-size: 40px;
+  color: #43494c;
+  margin-bottom: 70px;
+}
+
+.AboutMe-cardContainer {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: center;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}

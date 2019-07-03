@@ -1,0 +1,25 @@
+@import 'src/variables.scss';
+
+.Projects {
+  padding: 100px 10px;
+  border-top: 1px solid #b7b7b7;
+}
+
+.Projects-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.Projects-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.Projects-title {
+  color: white;
+  font-weight: 400;
+  font-size: 40px;
+  color: #43494c;
+  text-align: center;
+}

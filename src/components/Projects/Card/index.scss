@@ -1,0 +1,72 @@
+@import 'src/variables.scss';
+
+.Projects-card {
+  max-width: 375px;
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 5px;
+  box-shadow: 1px 1px 40px -5px rgba(0, 0, 0, 0.5);
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.Projects-cardImgWrapper {
+  height: 400px;
+  overflow: hidden;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.Projects-cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 0;
+}
+
+.Projects-cardTextContainer {
+  background: white;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 15px 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.Projects-cardTitle {
+  color: black;
+  font-size: 26px;
+  font-weight: 400;
+  font-size: 22px;
+  margin: 0 0 10px 0;
+}
+
+.Projects-cardP {
+  color: #5b5b5b;
+  font-size: 18px;
+  margin-top: 10px;
+  margin: 0 0 20px 0;
+}
+
+.Projects-flexSpacer {
+  flex: 1 1 auto;
+}
+
+.Projects-cardBtn {
+  display: inline-block;
+  background: linear-gradient(-45deg, $purple -20%, $blue);
+  font-size: 16px;
+  color: #eaffec;
+  text-decoration: none;
+  transition: 0.2s box-shadow;
+  padding: 10px 30px;
+  border-radius: 8px;
+  margin: 0 10px 0 0;
+
+  &:hover {
+    box-shadow: 2px 5px 10px -3px rgb(60, 55, 68);
+  }
+}

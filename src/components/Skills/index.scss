@@ -1,0 +1,105 @@
+@import 'src/variables.scss';
+
+.Skills {
+  position: relative;
+  padding-bottom: 100px;
+  padding-top: 1px;
+  overflow: hidden;
+}
+
+.Skills-background {
+  position: absolute;
+  width: 150%;
+  left: -25%;
+  height: 100%;
+  background-color: $grey;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+
+  @media (max-width: 800px) {
+    width: 200%;
+    left: -50%;
+  }
+
+  @media (max-width: 600px) {
+    width: 400%;
+    left: -150%;
+  }
+}
+
+.Skills-itemsContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 15px;
+  position: relative;
+}
+
+.Skills-title {
+  font-weight: 400;
+  font-size: 40px;
+  color: $heading-black;
+  text-align: center;
+  margin: 100px 0 50px 0;
+}
+
+.Skills-subTitle {
+  font-weight: 400;
+  font-size: 24px;
+  color: $heading-black;
+  margin: 40px 0 20px 0;
+  text-align: center;
+}
+
+.Skills-itemsList {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.Skills-item {
+  background-color: white;
+  margin: 15px;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 1px 1px 7px -3px black;
+  text-align: center;
+  width: 160px;
+  cursor: pointer;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: box-shadow 0.2s, opacity 0.4s, transform 0.4s ease-out;
+
+  &:hover {
+    box-shadow: 3px 3px 20px -10px black;
+  }
+
+  &--entered {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  @media (max-width: 1000px) {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  & a {
+    text-decoration: none;
+    color: $heading-black;
+  }
+}
+
+.Skills-itemImg {
+  width: 100px;
+  height: 100px;
+}
+
+.Skills-itemName {
+  font-weight: 400;
+  margin: 10px 0 0 0;
+  font-size: 20px;
+}
