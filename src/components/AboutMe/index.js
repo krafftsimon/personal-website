@@ -42,7 +42,7 @@ const AboutMe = () => {
         />
         <Card
           title="Web Development"
-          text=" I love designing websites using Moderm Front-End libraries like
+          text=" I love designing websites using Modern Front-End libraries like
             React and Angular. Most of the web apps I have created use Node.js
             on the Back-End, and are hosted on a Linux VM on Google Compute
             Engine. I am currently learning Golang and trying to become more
